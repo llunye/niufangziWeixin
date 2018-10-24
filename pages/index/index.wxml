@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<wxs module="m1">
+var a = -3, b = 18;
+
+// 逻辑与
+//console.log(a && b);
+//console.log(a || b);
+</wxs>
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfoA"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="btn-area" style='padding:5px; margin:20px;'>
+    <navigator url="/pages/component/index" hover-class="navigator-hover">component</navigator>
+    <navigator url="/pages/media/index" hover-class="navigator-hover">media</navigator>
+    <navigator url="/pages/test/test" hover-class="navigator-hover">test</navigator>
+    <navigator url="/pages/sold/sold" hover-class="navigator-hover">sold</navigator>
+    <navigator url="/pages/scrollline/scrollline" hover-class="navigator-hover">scroll-line</navigator>
+    <navigator url="/pages/selling/selling" hover-class="navigator-hover">selling</navigator>
+    <navigator url="/pages/multiCharts/index" hover-class="navigator-hover">multiCharts</navigator>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+

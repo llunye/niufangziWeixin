@@ -1,0 +1,7 @@
+/* pages/changeDetail/changeDetail.wxss */
+
+.recordList {
+  margin-top: 10rpx;
+  font-size: 40rpx;
+  border:1px solid gainsboro;
+}

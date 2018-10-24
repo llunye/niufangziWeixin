@@ -1,0 +1,28 @@
+<!--pages/component/test/test.wxml-->
+<text>pages/component/test/test.wxml</text>
+<template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+
+<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{srcWeb}}"></image>
+
+<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{src}}"></image>
+
+<button bindtap="onScanTap"> 扫描二维码 </button>
+<!-- 个人账户不支持
+<web-view src="https://www.niufangzi.com">niufangzi</web-view>
+-->
+<button bindtap="onReportTap"> 获取报表数据 </button>
+
+<view wx:for="{{changeRecords}}" wx:key='idx' wx:for-item="rec">  
+{{rec.createTime}} -- 
+{{rec.fangwuhuxing}} -- 
+{{rec.houseId}} --
+{{rec.xiaoqu}}
+</view>

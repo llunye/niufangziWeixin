@@ -1,0 +1,11 @@
+<!--pages/changeDetail/changeDetail.wxml-->
+<view>
+{{xiaoqu}}
+<image style="height: 200px; width: {{photoWidth}} background-color: #eeeeee;" mode="aspectFit" src="{{photoContent}}" bindtap="photoTap"></image>
+</view>
+
+<view  class="recordList" wx:for="{{changeHistory}}" wx:key='idx' wx:for-item="rec">  
+  <view> {{rec.createTime}} | {{rec.oldPrice}} => {{rec.newPrice}} |     
+    <text decode="{{true}}" space="{{true}}" style="color:{{rec.color}};">&nbsp;&nbsp;{{rec.rate}}&nbsp;</text>   
+  </view>
+</view>

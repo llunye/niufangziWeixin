@@ -1,0 +1,15 @@
+<view style="margin-top:10px;text-align:center">调价趋势({{cityName}})</view>
+
+<picker bindchange="bindPickerChange" value="{{periodIndex}}" range="{{periodArray}}">
+  <view class="picker">
+    统计周期：{{periodArray[periodIndex]}}
+  </view>
+</picker>
+
+<view style="margin-top:20px;">    
+    <canvas canvas-id="canvasCount" disable-scroll="true" class="canvas" bindtouchstart="touchHandlerCount" bindtouchmove="moveHandlerCount" bindtouchend="touchEndHandlerCount"></canvas>
+</view>
+
+<view style="margin-top:40px;">
+    <canvas canvas-id="canvasPrice" disable-scroll="true" class="canvas" bindtouchstart="touchHandlerPrice" bindtouchmove="moveHandlerPrice" bindtouchend="touchEndHandlerPrice"></canvas>
+</view>

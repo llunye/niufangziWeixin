@@ -1,0 +1,28 @@
+/* pages/changeList/changeList.wxss */
+.pageInfoView {
+  display: flex;
+  /*
+  margin-top: 10rpx;
+  
+  margin: 10rpx, 10rpx, 10rpx, 10rpx;
+  */
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70rpx;
+  font-size: 40rpx;
+  color: red;
+}
+
+.recordList {
+  margin-top: 10rpx;
+  font-size: 40rpx;
+  border:1px solid gainsboro;
+}
+
+.picker{
+    padding: 13px;
+    background-color: #FFFFFF;
+}

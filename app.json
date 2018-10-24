@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/sold/sold",
+    "pages/selling/selling",
+    "pages/change/change",
+    "pages/changeList/changeList",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/changeDetail/changeDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "牛房子",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#707070",
+    "selectedColor": "#1296DB",
+    "backgroundColor": "#DDDDDD",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/sold/sold",
+        "text": "成交",
+        "iconPath": "images/tabbar_home.png",
+        "selectedIconPath": "images/tabbar_home_s.png"
+      },
+      {
+        "pagePath": "pages/selling/selling",
+        "text": "在售",
+        "iconPath": "images/tabbar_report.png",
+        "selectedIconPath": "images/tabbar_report_s.png"
+      },
+      {
+        "pagePath": "pages/change/change",
+        "text": "调价",
+        "iconPath": "images/tabbar_adjust.png",
+        "selectedIconPath": "images/tabbar_adjust_s.png"
+      },
+      {
+        "pagePath": "pages/changeList/changeList",
+        "text": "列表",
+        "iconPath": "images/tabbar_list.png",
+        "selectedIconPath": "images/tabbar_list_s.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tabbar_my.png",
+        "selectedIconPath": "images/tabbar_my_s.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 3000
+  },
+  "debug": false
+}

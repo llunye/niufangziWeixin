@@ -1,0 +1,20 @@
+<!--pages/changeList/changeList.wxml-->
+<view class="pageInfoView">
+<text >左右滑动翻页</text>  
+<text padding="13px" padding-left="15px">{{pageText}}</text>
+</view>
+
+<picker bindchange="bindPickerChange" value="{{quIndex}}" range="{{quArray}}">
+  <view class="picker">
+    {{cityName}} - 区域：{{quArray[quIndex]}}
+  </view>
+</picker>
+
+<view  class="recordList"  bindtouchstart="touchStart" bindtouchend="touchEnd"  bindtap="recTap"       wx:for="{{changeRecords}}" wx:key='idx' wx:for-item="rec" id='{{rec.houseId}}' 
+      data-xiaoqu='{{rec.quyu1}}-{{rec.quyu2}}-{{rec.xiaoqu}}-{{rec.jianzhumianji}}平'>  
+  <view> {{rec.createTime}}  |  {{rec.quyu1}}  |  {{rec.quyu2}} </view>
+  <view> {{rec.xiaoqu}}  |  {{rec.fangwuhuxing}} </view>
+  <view> {{rec.jianzhumianji}}平 | {{rec.oldPrice}} => {{rec.newPrice}}    
+    <text decode="{{true}}" space="{{true}}" style="color:{{rec.color}};">&nbsp;{{rec.rate}}&nbsp;</text> {{rec.changeTimes}}次  
+  </view>
+</view>

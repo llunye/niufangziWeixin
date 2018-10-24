@@ -1,0 +1,29 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfoA"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <picker bindchange="bindPickerChange" value="{{cityIndex}}" range="{{cityNameArray}}" style="margin-top:40px;">
+    <view class="picker">
+      选择城市：{{cityNameArray[cityIndex]}}
+    </view>
+  </picker>
+
+  <view class="btn-area" style='padding:5px; margin:20px;margin-top:40px;'>
+    <navigator url="/pages/test/test" hover-class="navigator-hover">test</navigator>
+  </view>
+
+  <view style='padding:5rpx 10rpx;'> V0.4.0</view>
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
+
